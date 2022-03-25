@@ -1,0 +1,21 @@
+.App {
+  font-family: "Source Sans Pro";
+  /* font-family: "Myriad Pro Regular"; */
+  min-height: 100vh;
+}
+.MuiInputAdornment-positionEnd > .MuiIconButton-root {
+  background: rebeccapurple !important;
+  color: white !important;
+}
+.btn-secondary {
+  background-color: #04bbfb !important;
+  padding: 10px 20px !important;
+  color: white !important;
+}
+.btn-secondary:disabled {
+  color: grey !important;
+  background-color: lightgrey !important;
+}
+.genContent {
+  font-size: 18px;
+}
