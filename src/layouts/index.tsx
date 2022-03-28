@@ -83,6 +83,10 @@ const Bridge = styled(Box)`
   width : 70%;
   margin-top: 30px;
   margin-bottom: 30px;
+  @media (max-width: 1026px) {
+    padding: 0px;
+    width: 90%;
+  }
 `
 
 Layout.propTypes = {
