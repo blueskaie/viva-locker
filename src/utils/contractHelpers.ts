@@ -14,7 +14,6 @@ const httpProvider = new Web3.providers.HttpProvider(RPC_URL, {
  */
 
 const getContract = async (address : any, abi : any) => {
-  window.web3 = new Web3(window.ethereum);
   const contract = await new window.web3.eth.Contract(abi, address);
   //TODO Check chain id on functions calling getContract
   return { contract };
