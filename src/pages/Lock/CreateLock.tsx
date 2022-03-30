@@ -170,7 +170,7 @@ const CreateLock: React.FC<CreateLockProps> = ({ account, setAccount }) => {
           title={"Token or LP Token address"}
           checkflag={checkflags[0]}
           setValue={setAddress}
-          value={address}
+          value={address.toLowerCase()}
           type={"text"}
           placeholder={"Enter token or Lp Address"}
           validationString="Invalid Address"

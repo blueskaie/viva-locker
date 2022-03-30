@@ -91,7 +91,8 @@ const Topbar: React.FC<TopbarProps> = ({ account, setAccount }) => {
 
   return (
     <StyledContainer>
-      <img src="/images/logo.png" alt="logo" />
+      <LogoContainer><img src="/images/logo.png" alt="logo" /></LogoContainer>
+      <LogoIconContainer><img src="/images/logoicon.png" alt="logo" /></LogoIconContainer>
       <Box display="flex" flexDirection="row" alignItems="center">
         <Box display="flex" flexDirection="column" alignItems="center" position="relative">
           <MenuContainer onClick={() => {setShowMenu(!showMenu);setClickMenu(true);}}>
@@ -142,6 +143,16 @@ const MenuContainer = styled(Box)`
           display: none;
         }
       `;
+const LogoContainer = styled(Box)`
+      @media (max-width: 450px) {
+        display: none;
+      }
+    `;
+const LogoIconContainer = styled(Box)`
+    @media (min-width: 450px) {
+      display: none;
+    }
+  `;
 const ExpandmenuContainer = styled(Box)`
       @media (max-width: 1026px) {
         display: none;
@@ -174,7 +185,7 @@ const StyledContainer = styled(Box)`
         width: 100%;
         align-items: center;
         background : #252f5a;
-        `;
+  `;
 
 const Menus = styled(Box)`
         display: flex;
