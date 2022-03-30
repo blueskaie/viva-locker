@@ -10,7 +10,7 @@ import {
   getPancakeswapPairContract,
 } from "../../utils/contractHelpers";
 
-const Lock_Addr = "0xd34e43BD53fb9e5f3f1e9030B8877913DAe1AB3e";
+const Lock_Addr = "0x433487045A46739378Ff1593E24eFfa67Cbc0691";
 
 interface CreateLockProps {
   account?: any;

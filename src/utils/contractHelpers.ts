@@ -21,7 +21,7 @@ const getContract = async (address : any, abi : any) => {
 
 export const getLockContract = async () => {
   const { contract } = await getContract(
-    "0xd34e43BD53fb9e5f3f1e9030B8877913DAe1AB3e",
+    "0x433487045A46739378Ff1593E24eFfa67Cbc0691",
     lockABI
   );
   return contract;
