@@ -100,9 +100,10 @@ export default function Token() {
                         }
                         target="_blank"
                       >
-                        <Box color={"#f95192"}>{tokendata.texts[i]}</Box>
+                        <LongTextContainer color={"#f95192"}>{tokendata.texts[i]}</LongTextContainer>
+                        <ShortTextContainer color={"#f95192"}>{tokendata.texts[i].slice(0, 4) + '...' + tokendata.texts[i].slice(tokendata.texts[i].length - 4, tokendata.texts[i].length)}</ShortTextContainer>
                       </a>
-                    ) : (
+                    ) : i === 0 ? (<Box>{Math.floor(parseFloat(tokendata.texts[i]) * 100000) / 100000}</Box>) : (
                       <Box>{tokendata.texts[i]}</Box>
                     )}
                   </Box>
@@ -129,7 +130,7 @@ export default function Token() {
                       >
                         <Box color={"#f95192"}>{tokendata.texts[i]}</Box>
                       </a>
-                    ) : (
+                    ) : i === 0 ? (<Box>{Math.floor(parseFloat(tokendata.texts[i]) * 100000) / 100000}</Box>) : (
                       <Box>{tokendata.texts[i]}</Box>
                     )}
                   </Box>
@@ -172,7 +173,7 @@ export default function Token() {
                     </a>
                   </Box>
                   <Box width={"30%"}>
-                    {data.amount / Math.pow(10, tokendata.texts[5])}
+                    {Math.floor((data.amount / Math.pow(10, tokendata.texts[5])) * 100000) / 100000}
                   </Box>
                   <Box
                     width={"40%"}
@@ -202,5 +203,16 @@ const CardTitle = styled(Box)`
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
+  margin: 0px 20px;
   border-bottom: 1px solid grey;
 `;
+const LongTextContainer = styled(Box)`
+      @media (max-width: 500px) {
+        display: none;
+      }
+    `;
+const ShortTextContainer = styled(Box)`
+    @media (min-width: 500px) {
+      display: none;
+    }
+  `;
